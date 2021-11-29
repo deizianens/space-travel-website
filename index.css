@@ -108,6 +108,13 @@ select {
   gap: var(--gap, 1rem);
 }
 
+/* selects everything but the first child 
+    where pseudo-class doesnt add specificity to the rule
+*/
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
