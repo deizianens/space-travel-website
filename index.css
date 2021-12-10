@@ -264,3 +264,34 @@ select {
   opacity: 1;
   transform: scale(1.5);
 }
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.underline-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0.5);
+}
+
+.underline-indicators > .active {
+  border-bottom: 0.2rem solid hsl(var(--clr-white));
+}
