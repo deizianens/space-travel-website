@@ -173,7 +173,7 @@
             >
           </div>
 
-          <div style="margin-bottom: 50vh">
+          <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
             <div class="tabs flex underline-indicators">
               <button
                 aria-selected="true"
@@ -210,6 +210,28 @@
                 "
               >
                 Venus
+              </button>
+            </div>
+
+            <div class="dots flex">
+              <button aria-selected="true">
+                <span class="sr-only">Slide title</span>
+              </button>
+              <button aria-selected="false">
+                <span class="sr-only">Slide title</span>
+              </button>
+              <button aria-selected="false">
+                <span class="sr-only">Slide title</span>
+              </button>
+            </div>
+
+            <div class="dots-numbers flow" style="--flow-space: 1rem">
+              <button class="bg-dark text-white" aria-selected="true">1</button>
+              <button class="bg-dark text-white" aria-selected="false">
+                2
+              </button>
+              <button class="bg-dark text-white" aria-selected="false">
+                3
               </button>
             </div>
           </div>
