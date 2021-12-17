@@ -121,6 +121,11 @@ select {
   max-width: 80rem;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 2em minmax(0, 60rem) 2em;
+}
+
 /* for assistive tech 
   visually hide things but maintain it for screen readers
 */
@@ -238,7 +243,7 @@ select {
 
 .large-button {
   position: relative;
-  display: grid;
+  display: inline-grid;
   padding: 0 2em;
   z-index: 1;
   aspect-ratio: 1 / 1; /* width over height */
