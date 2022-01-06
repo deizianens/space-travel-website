@@ -352,10 +352,12 @@ select {
   border: 1px solid hsl(var(--clr-white) / 0.2);
   border-radius: 50%;
 }
+
 .dots-numbers > *:hover,
 .dots-numbers > *:focus {
   border: 1px solid hsl(var(--clr-white));
 }
+
 .dots-numbers > [aria-selected="true"] {
   background-color: hsl(var(--clr-white));
   color: hsl(var(--clr-dark));
