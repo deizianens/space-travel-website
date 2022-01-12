@@ -332,8 +332,14 @@ select {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl(var(--clr-white) / 0.05);
-  backdrop-filter: blur(1.5rem); /* does not work on firefox :( */
+  background: hsl(var(--clr-dark) / 0.95);
+}
+
+@supports (backdrop-filter: blur(1.5rem)) {
+  .primary-navigation {
+    background: hsl(var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem); /* does not work on firefox :( */
+  }
 }
 
 @media (max-width: 35rem) {
