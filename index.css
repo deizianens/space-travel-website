@@ -581,6 +581,31 @@ body {
   font-size: 1.75rem;
 }
 
+/* crew layout */
+
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container--crew > img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+}
+
+.grid-container--crew > .dots {
+  grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+  grid-area: content;
+}
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
@@ -591,16 +616,30 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
   }
+
+  .grid-container--crew {
+    padding-bottom: 0;
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+  }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 40rem)) minmax(
-        2em,
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
         1fr
       );
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
   }
 
   .grid-container--home > *:first-child {
@@ -609,11 +648,6 @@ body {
 
   .grid-container--home > *:last-child {
     grid-column: 3;
-  }
-
-  .grid-container--home {
-    padding-bottom: max(6rem, 20vh);
-    align-items: end;
   }
 
   .grid-container--destination {
@@ -625,12 +659,28 @@ body {
       ". image content .";
   }
 
-  .grid-container--destination > img {
+  .grid-container--destination > img,
+  .grid-container--crew > img {
     max-width: 90%;
   }
 
   .destination-meta {
-    --gap: min(5vw, 6rem);
+    --gap: min(6vw, 6rem);
     justify-content: start;
+  }
+
+  .grid-container--crew {
+    grid-template-areas:
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+
+  .grid-container--crew > .dots {
+    justify-self: start;
+  }
+
+  .grid-container--crew > img {
+    align-self: end;
   }
 }
