@@ -107,34 +107,50 @@
         <img src="assets/destination/image-titan.png" alt="the moon titan" />
       </picture>
 
-      <div class="tab-list underline-indicators flex">
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="destination list"
+      >
         <button
           aria-selected="true"
+          role="tab"
+          aria-controls="moon-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="0"
         >
           Moon
         </button>
         <button
           aria-selected="false"
+          role="tab"
+          aria-controls="mars-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="-1"
         >
           Mars
         </button>
         <button
           aria-selected="false"
+          role="tab"
+          aria-controls="europa-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="-1"
         >
           Europa
         </button>
         <button
           aria-selected="false"
+          role="tab"
+          aria-controls="titan-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="-1"
         >
           Titan
         </button>
       </div>
 
-      <article class="destination-info flow">
+      <article class="destination-info flow" id="moon-tab" role="tabpanel">
         <h2 class="fs-800 uppercase ff-serif">Moon</h2>
 
         <p>
@@ -157,7 +173,12 @@
       </article>
 
       <!-- Mars -->
-      <article hidden class="destination-info flow">
+      <article
+        hidden
+        class="destination-info flow"
+        id="mars-tab"
+        role="tabpanel"
+      >
         <h2 class="fs-800 uppercase ff-serif">Mars</h2>
 
         <p>
@@ -179,7 +200,12 @@
       </article>
 
       <!-- Europa -->
-      <article hidden class="destination-info flow">
+      <article
+        hidden
+        class="destination-info flow"
+        id="europa-tab"
+        role="tabpanel"
+      >
         <h2 class="fs-800 uppercase ff-serif">Europa</h2>
 
         <p>
@@ -201,7 +227,12 @@
       </article>
 
       <!-- Titan -->
-      <article hidden class="destination-info flow">
+      <article
+        hidden
+        class="destination-info flow"
+        id="titan-tab"
+        role="tabpanel"
+      >
         <h2 class="fs-800 uppercase ff-serif">Titan</h2>
 
         <p>
