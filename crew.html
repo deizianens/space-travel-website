@@ -80,22 +80,51 @@
         <span aria-hidden="true">02</span> Meet your crew
       </h1>
 
-      <div class="dots flex">
-        <button aria-selected="true">
+      <div class="dots flex" role="tablist" aria-label="crew member list">
+        <button
+          aria-selected="true"
+          aria-controls="commander-tab"
+          data-image="commander-image"
+          role="tab"
+          tabindex="0"
+        >
           <span class="sr-only">The commander</span>
         </button>
-        <button aria-selected="false">
+        <button
+          aria-selected="false"
+          aria-controls="mission-tab"
+          data-image="mission-image"
+          role="tab"
+          tabindex="-1"
+        >
           <span class="sr-only">The mission specialist</span>
         </button>
-        <button aria-selected="false">
+        <button
+          aria-selected="false"
+          aria-controls="pilot-tab"
+          data-image="pilot-image"
+          role="tab"
+          tabindex="-1"
+        >
           <span class="sr-only">The pilot</span>
         </button>
-        <button aria-selected="false">
+        <button
+          aria-selected="false"
+          aria-controls="crew-tab"
+          data-image="crew-image"
+          role="tab"
+          tabindex="-1"
+        >
           <span class="sr-only">The crew engineer</span>
         </button>
       </div>
 
-      <article class="crew-details flow">
+      <article
+        class="crew-details flow"
+        id="commander-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">Commander</h2>
           <p class="fs-700 uppercase ff-serif">Douglas Hurley</p>
@@ -106,7 +135,66 @@
           time as commander of Crew Dragon Demo-2.
         </p>
       </article>
-      <picture>
+      <picture id="commander-image">
+        <source
+          srcset="assets/crew/image-douglas-hurley.webp"
+          type="image/webp"
+        />
+        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
+      </picture>
+
+      <!-- Anousheh -->
+      <article class="crew-details flow" hidden id="mission-tab">
+        <header class="flow flow--space-small">
+          <h2 class="fs-600 ff-serif uppercase">Commander</h2>
+          <p class="fs-700 uppercase ff-serif">Anousheh Ansari</p>
+        </header>
+        <p>
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </article>
+      <picture hidden>
+        <source
+          srcset="assets/crew/image-anousheh-ansari.webp"
+          type="image/webp"
+        />
+        <img src="assets/crew/anousheh-ansari.png" alt="Anousheh Ansari" />
+      </picture>
+
+      <!-- Mark -->
+      <article class="crew-details flow" hidden>
+        <header class="flow flow--space-small">
+          <h2 class="fs-600 ff-serif uppercase">Commander</h2>
+          <p class="fs-700 uppercase ff-serif">Mark</p>
+        </header>
+        <p>
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </article>
+      <picture hidden>
+        <source
+          srcset="assets/crew/image-douglas-hurley.webp"
+          type="image/webp"
+        />
+        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
+      </picture>
+
+      <article class="crew-details flow" hidden>
+        <header class="flow flow--space-small">
+          <h2 class="fs-600 ff-serif uppercase">Commander</h2>
+          <p class="fs-700 uppercase ff-serif">Victor Glover</p>
+        </header>
+        <p>
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </article>
+      <picture hidden>
         <source
           srcset="assets/crew/image-douglas-hurley.webp"
           type="image/webp"
