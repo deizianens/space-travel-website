@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | Space tourism website</title>
     <script src="navigation.js" defer></script>
+    <script src="tabs.js" defer></script>
   </head>
 
   <body class="crew">
@@ -143,63 +144,90 @@
         <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
       </picture>
 
-      <!-- Anousheh -->
-      <article class="crew-details flow" hidden id="mission-tab">
+      <!-- Mark SHuttleworth -->
+      <article
+        hidden
+        class="crew-details flow"
+        id="mission-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
         <header class="flow flow--space-small">
-          <h2 class="fs-600 ff-serif uppercase">Commander</h2>
+          <h2 class="fs-600 ff-serif uppercase">Mission Specialist</h2>
+          <p class="fs-700 uppercase ff-serif">Mark SHuttleworth</p>
+        </header>
+        <p>
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </p>
+      </article>
+      <picture hidden id="mission-image">
+        <source
+          srcset="assets/crew/image-mark-shuttleworth.webp"
+          type="image/webp"
+        />
+        <img
+          src="assets/crew/image-mark-shuttleworth.png"
+          alt="Mark SHuttleworth"
+        />
+      </picture>
+
+      <!-- Victor Glover -->
+      <article
+        hidden
+        class="crew-details flow"
+        id="pilot-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <header class="flow flow--space-small">
+          <h2 class="fs-600 ff-serif uppercase">Pilot</h2>
+          <p class="fs-700 uppercase ff-serif">Victor Glover</p>
+        </header>
+        <p>
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the
+          International Space Station. Glover is a commander in the U.S. Navy
+          where he pilots an F/A-18.He was a crew member of Expedition 64, and
+          served as a station systems flight engineer.
+        </p>
+      </article>
+      <picture hidden id="pilot-image">
+        <source
+          srcset="assets/crew/image-victor-glover.webp"
+          type="image/webp"
+        />
+        <img src="assets/crew/image-victor-glover.png" alt="Victor Glover" />
+      </picture>
+
+      <!-- Anousheh Ansari -->
+      <article
+        hidden
+        class="crew-details flow"
+        id="crew-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <header class="flow flow--space-small">
+          <h2 class="fs-600 ff-serif uppercase">Flight Engineer</h2>
           <p class="fs-700 uppercase ff-serif">Anousheh Ansari</p>
         </header>
         <p>
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
+          Anousheh Ansari is an Iranian American engineer and co-founder of
+          Prodea Systems. Ansari was the fourth self-funded space tourist, the
+          first self-funded woman to fly to the ISS, and the first Iranian in
+          space.
         </p>
       </article>
-      <picture hidden>
+      <picture hidden id="crew-image">
         <source
           srcset="assets/crew/image-anousheh-ansari.webp"
           type="image/webp"
         />
-        <img src="assets/crew/anousheh-ansari.png" alt="Anousheh Ansari" />
-      </picture>
-
-      <!-- Mark -->
-      <article class="crew-details flow" hidden>
-        <header class="flow flow--space-small">
-          <h2 class="fs-600 ff-serif uppercase">Commander</h2>
-          <p class="fs-700 uppercase ff-serif">Mark</p>
-        </header>
-        <p>
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
-      </article>
-      <picture hidden>
-        <source
-          srcset="assets/crew/image-douglas-hurley.webp"
-          type="image/webp"
+        <img
+          src="assets/crew/image-anousheh-ansari.png"
+          alt="Anousheh Ansari"
         />
-        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
-      </picture>
-
-      <article class="crew-details flow" hidden>
-        <header class="flow flow--space-small">
-          <h2 class="fs-600 ff-serif uppercase">Commander</h2>
-          <p class="fs-700 uppercase ff-serif">Victor Glover</p>
-        </header>
-        <p>
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
-      </article>
-      <picture hidden>
-        <source
-          srcset="assets/crew/image-douglas-hurley.webp"
-          type="image/webp"
-        />
-        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
       </picture>
     </main>
   </body>
